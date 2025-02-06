@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: #333333;
+}
+
+body{
+    font-family: "Poppins", serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.header_top {
+    width: 100%;
+    background-color: white; /* Fondo blanco */
+    padding: 20px 0; /* Espacio interno */
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/educacion.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.hero_container {
+    max-width: 800px;
+    text-align: center;
+    z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
+}
+
+.hero_title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero_paragraph {
+    margin-bottom: 20px;
+}
+
+.nav_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Espacio en la parte superior */
+    position: relative;
+    z-index: 1;
+}
+
+.logo_top {
+    width: 100%;
+    background-color: white; /* Fondo blanco */
+    padding: 20px 0; /* Espacio interno */
+    display: flex;
+    justify-content: center; /* Centra el logo horizontalmente */
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+.logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_logo-img{
+    width: 300px;
+    height: auto;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/educacion.jpg');
+    background-size: cover;
+    z-index: -1;
+}
+
+.nav {
+    width: 100%;
+    background-color: #333; /* Fondo oscuro para la barra de navegación */
+    padding: 10px 0; /* Espacio interno */
+    display: flex;
+    justify-content: center; /* Centra los enlaces horizontalmente */
+}
+
+.nav_title{
+    font-weight: 300;
+}
+
+.nav_items{
+    list-style: none;
+}
+
+.nav_link{
+    display: flex;
+    gap: 2em; /* Espacio entre los enlaces */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav_links{
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav_links:hover{
+    background-color: #b91817;
+}
+
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_img{
+    display: block;
+    width: 30px;
+}
+
+.nav_close{
+    display: var(--show, none);  
+}
+
+.hero_container{
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero_title{
+    font-size: 3rem;
+}
+
+.hero_paragraph{
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    background-color: #b91817;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+/*About*/
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph{
+    line-height: 1.7;
+}
+
+.about_main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about_icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about_icon{
+    width: 40px;
+}
+
+
+/* Formation */
+
+.formation{
+    background-color: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 65%, rgba(232,232,231,1) 100%);
+    overflow: hidden;
+}
+
+.formation_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.formation_photo{
+    max-width: 500px;
+}
+
+.formation_paragraph{
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.formation_img{
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.formation_texts{
+    text-align: center;
+}
+
+
+/*Modalidades*/
+
+.modalities{
+    text-align: center;
+}
+
+.modalities_table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modalitie_element{
+    background-color: #e8e8e7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-modalitie: #333333;
+    --bg-cta: #b91817;
+    --color-items: #696871;
+}
+
+.modalitie_name{
+    color: var(--color-modalitie);
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.modalitie_items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+
+.modalitie_cta{
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+
+/*News*/
+
+.news{
+    background-color: #fff;
+}
+
+.news_container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.news_body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.news_body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.news_img{
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.news_text{
+    max-width: 700px;
+}
+
+.news .subtitle{
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/*.news_course{
+    background-color: aqua;
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+}*/
+
+.news_arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+/* Questions */
+
+.questions{
+    text-align: center;
+}
+
+.questions_container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.questions_padding{
+    padding: 0;
+    transition: padding .3s;
+    border: 1px solid #e8e8e7;
+    border-radius: 6px;
+}
+
+.questions_padding--add{
+    padding-bottom: 30px;
+}
+
+.questions_answer{
+    padding: 0 30px 0;
+    overflow: hidden;
+}
+
+.questions_title{
+    text-align: left;
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+}
+
+.questions_arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition: transform .3s;
+}
+
+.questions_arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.questions_show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+
+.questions_img{
+    display: block;
+}
+
+.questions_copy{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/*Footer*/
+
+.footer{
+    background: radial-gradient(circle, rgba(185,24,23,1) 60%, rgba(80,20,20,1) 100%);
+}
+
+.footer_title{
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.footer_title, .footer_newsletter{
+    color: #fff;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 30px;
+}
+
+.nav--footer{
+    padding: 20px;
+    display: grid;
+    gap: 1em;
+    grid-auto-flow: row;
+    height: 100%;
+}
+
+.footer_location{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer_location-icon{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.footer_location-text{
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+/*.nav_link--footer{
+    display: flex;
+    margin: 0;
+    margin-right:20px;
+    flex-wrap: wrap;
+}*/
+
+.footer_inputs{
+    margin-top: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.footer_input{
+    background-color: #fff;
+    height: 50px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    margin-right: 16px;
+}
+
+.footer_submit{
+    margin-left: auto;
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #333333;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 30px;
+}
+
+.footer_copy{
+    --padding-container: 30px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer_copyright{
+    font-weight: 300;
+}
+
+.footer_icons{
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+.footer_img{
+    width: 30px;
+}
+
+/* Media */
+
+@media (max-width:800px){
+    .nav_menu{
+        display: block;
+    }
+
+    .nav_link--menu{
+        position: fixed;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 100;
+        opacity: 0;
+        pointer-events: none;
+        transition: .7s opacity;
+    }
+
+    .nav_link--show{
+        --show: block;
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    .nav_close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        cursor: pointer;
+    }
+}
